@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plugins",
+  "info": {
+    "singularName": "plugin",
+    "pluralName": "plugins",
+    "displayName": "Plugin"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "File": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "CameoVersion": {
+      "type": "enumeration",
+      "enum": [
+        "Cameo 20221x",
+        "Cameo 2022x",
+        "Cameo 21x Gold",
+        "Cameo 22x Gold"
+      ]
+    },
+    "PluginVersion": {
+      "type": "enumeration",
+      "enum": [
+        "C 6.0.1",
+        "C 6.1",
+        "C 6.2"
+      ]
+    },
+    "TeamcenterVersion": {
+      "type": "enumeration",
+      "enum": [
+        "TC 14.2",
+        "TC 13.3",
+        "TC 12.4"
+      ]
+    },
+    "FileName": {
+      "type": "string"
+    }
+  }
+}

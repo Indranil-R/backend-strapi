@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "licenses",
+  "info": {
+    "singularName": "license",
+    "pluralName": "licenses",
+    "displayName": "License",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "MacID_HostID_Node_Server": {
+      "type": "string"
+    },
+    "MacID": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Trial",
+        "Permanent"
+      ]
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Node Locked",
+        "Floating"
+      ]
+    },
+    "StartDate": {
+      "type": "date"
+    },
+    "EndDate": {
+      "type": "date"
+    },
+    "CameoConnectorVersion": {
+      "type": "enumeration",
+      "enum": [
+        "C 6.0.1",
+        "C 6.0",
+        "C .1"
+      ]
+    },
+    "TCVersion": {
+      "type": "enumeration",
+      "enum": [
+        "TC 14.2",
+        "TC 13.3"
+      ]
+    },
+    "CameoSysModeler": {
+      "type": "enumeration",
+      "enum": [
+        "Cameo 2021x",
+        "Cameo 2022x Gold"
+      ]
+    },
+    "AWCVersion": {
+      "type": "enumeration",
+      "enum": [
+        "AWC 6.1",
+        "AWC 6.2"
+      ]
+    },
+    "LinkToPO_OrSOW": {
+      "type": "string"
+    },
+    "Customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::organization.organization",
+      "inversedBy": "Licenses"
+    },
+    "issuedTo": {
+      "type": "email"
+    }
+  }
+}
